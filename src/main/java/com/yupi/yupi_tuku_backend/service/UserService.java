@@ -1,7 +1,7 @@
 package com.yupi.yupi_tuku_backend.service;
 
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
-import com.yupi.yupi_tuku_backend.model.dto.UserQueryRequest;
+import com.yupi.yupi_tuku_backend.model.dto.user.UserQueryRequest;
 import com.yupi.yupi_tuku_backend.model.entity.User;
 import com.baomidou.mybatisplus.extension.service.IService;
 import com.yupi.yupi_tuku_backend.model.vo.LoginUserVO;
@@ -66,6 +66,13 @@ public interface UserService extends IService<User> {
     boolean userLogout(HttpServletRequest request);
 
     QueryWrapper<User> getQueryWrapper(UserQueryRequest userQueryRequest);
+    /**
+     * 是否为管理员
+     *
+     * @param user
+     * @return
+     */
+    boolean isAdmin(User user);
 
 
 }

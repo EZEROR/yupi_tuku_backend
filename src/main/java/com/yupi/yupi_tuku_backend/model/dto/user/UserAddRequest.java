@@ -1,4 +1,4 @@
-package com.yupi.yupi_tuku_backend.model.dto;
+package com.yupi.yupi_tuku_backend.model.dto.user;
 
 import lombok.Data;
 

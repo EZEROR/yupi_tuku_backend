@@ -8,7 +8,7 @@ import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.yupi.yupi_tuku_backend.exception.BusinessException;
 import com.yupi.yupi_tuku_backend.exception.ErrorCode;
-import com.yupi.yupi_tuku_backend.model.dto.UserQueryRequest;
+import com.yupi.yupi_tuku_backend.model.dto.user.UserQueryRequest;
 import com.yupi.yupi_tuku_backend.model.entity.User;
 import com.yupi.yupi_tuku_backend.model.enums.UserRoleEnum;
 import com.yupi.yupi_tuku_backend.model.vo.LoginUserVO;
@@ -200,6 +200,12 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User>
         }
         return userList.stream().map(this::getUserVO).collect(Collectors.toList());
     }
+
+    @Override
+    public boolean isAdmin(User user) {
+        return user != null && UserRoleEnum.ADMIN.getValue().equals(user.getUserRole());
+    }
+
 
 
 

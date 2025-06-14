@@ -1,7 +1,6 @@
 package com.yupi.yupi_tuku_backend.controller;
 
 
-import cn.hutool.core.bean.BeanUtil;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.yupi.yupi_tuku_backend.annotation.AuthCheck;
 import com.yupi.yupi_tuku_backend.common.BaseResponse;
@@ -11,7 +10,7 @@ import com.yupi.yupi_tuku_backend.constant.UserConstant;
 import com.yupi.yupi_tuku_backend.exception.BusinessException;
 import com.yupi.yupi_tuku_backend.exception.ErrorCode;
 import com.yupi.yupi_tuku_backend.exception.ThrowUtils;
-import com.yupi.yupi_tuku_backend.model.dto.*;
+import com.yupi.yupi_tuku_backend.model.dto.user.*;
 import com.yupi.yupi_tuku_backend.model.entity.User;
 import com.yupi.yupi_tuku_backend.model.vo.LoginUserVO;
 import com.yupi.yupi_tuku_backend.model.vo.UserVO;
@@ -21,7 +20,6 @@ import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
-import java.util.Date;
 import java.util.List;
 
 @RestController
